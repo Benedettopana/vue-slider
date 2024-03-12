@@ -34,7 +34,9 @@
 
                 <div class="col-12 p-5">
                     <div class="my-carousel-container d-flex flex-column px-5" id="my-carousel">
-                        <div class="my-carousel-images">
+                        <div class="my-carousel-images"
+                        @mouseenter="onMe = false"
+                        @mouseleave="onMe = true">
 
                             <!-- <div class="my-carousel-item active">
                                 <img class="img-fluid" src="http://www.viaggiareonline.it/wp-content/uploads/2014/11/sweden_148857365.jpg" alt="${images[i].title} picture">
