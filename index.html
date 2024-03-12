@@ -62,9 +62,14 @@
                                 <span class="my-prev-hook"></span>
                             </div>
 
-                            <div class="my-thumbnail active">
-                                <img class="img-fluid" src="http://www.viaggiareonline.it/wp-content/uploads/2014/11/sweden_148857365.jpg" alt="Thumbnail of Svezia picture">
+                            <div class="my-thumbnail" 
+                            v-for="(thumb,indice) in images"
+                            :class="{'active' : indice === counter}">
+                                <img class="img-fluid" :src="thumb.url" :alt="thumb.title">
                             </div>
+                            <!-- <div class="my-thumbnail active">
+                                <img class="img-fluid" src="http://www.viaggiareonline.it/wp-content/uploads/2014/11/sweden_148857365.jpg" alt="Thumbnail of Svezia picture">
+                            </div> -->
 
                             <!-- next -->
                             <div class="my-next position-absolute">
