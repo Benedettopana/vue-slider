@@ -35,7 +35,8 @@
                 <div class="col-12 p-5">
                     <div class="my-carousel-container d-flex flex-column px-5" id="my-carousel"
                     @mouseenter="onMe = false"
-                    @mouseleave="onMe = true">
+                    @mouseleave="onMe = true"
+                    >
                         <div class="my-carousel-images">
 
                             <!-- <div class="my-carousel-item active">
@@ -46,7 +47,7 @@
                                 </div>
                             </div> -->
                             <div class="">
-                                <div class="my-carousel-item active">
+                                <div class="my-carousel-item active" @dblclick="verso = !verso">
                                     <img class="img-fluid" :src="images[counter].url" :alt="images[counter].title">
                                     <div class="item-description px-3">
                                         <h2>{{ images[counter].title }}</h2>

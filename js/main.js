@@ -35,6 +35,7 @@ createApp({
             counter: 0,
             isNext: null,
             onMe: true,
+            verso: true,
         }
     },
 
@@ -54,9 +55,9 @@ createApp({
         autoPlay(){
             setInterval(() => {
                 if(this.onMe){
-                    this.nextImg(true);
+                    this.nextImg(this.verso);
                 }
-            }, 3000)
+            }, 1000)
         },
 
     },
