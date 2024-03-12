@@ -34,6 +34,7 @@ createApp({
             ],
             counter: 0,
             isNext: null,
+            onMe: true,
         }
     },
 
@@ -49,8 +50,19 @@ createApp({
             }
         },
 
-        
+        // Autoplay
+        autoPlay(){
+            setInterval(() => {
+                if(this.onMe){
+                    this.nextImg(true);
+                }
+            }, 2000)
+        },
 
+    },
+
+    mounted(){
+        this.autoPlay();
     },
 }).mount('#app')
 
