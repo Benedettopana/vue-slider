@@ -56,7 +56,7 @@ createApp({
                 if(this.onMe){
                     this.nextImg(true);
                 }
-            }, 2000)
+            }, 3000)
         },
 
     },
