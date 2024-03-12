@@ -33,25 +33,23 @@ createApp({
                 },
             ],
             counter: 0,
-            
+            isNext: null,
         }
     },
 
     methods: {
-        // createImg(){
-        //     images.forEach((element, index) => {
-        //         const myImgTemp =  `
-        //         <div class="my-carousel-item">
-        //             <img class="img-fluid" src="${elemento.url}" alt="${elemento.title} picture">
-        //             <div class="item-description px-3">
-        //                 <h2>${elemento.title}</h2>
-        //                 <p>${elemento.description}</p>
-        //             </div>
-        //         </div>
-        //         `;
-        //     })
-            
-        // },
+        nextImg(isNext){
+            isNext ? this.counter++ : this.counter--;
+
+            // controllo se sono arrrivato alla fine o torno indietro
+            if(this.counter == this.images.length){
+                this.counter = 0;
+            }else if(this.counter < 0){
+                this.counter = this.images.length - 1;
+            }
+        },
+
+        
 
     },
 }).mount('#app')
