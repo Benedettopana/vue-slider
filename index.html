@@ -26,7 +26,7 @@
 <body>
 
     <main>
-        <div id="#app" class="container-fluid p-5">
+        <div id="app" class="container-fluid p-5">
             <div class="row text-center">
                 <div class="col-12 p-3" id="my-before-carousel">
 
@@ -36,14 +36,23 @@
                     <div class="my-carousel-container d-flex flex-column px-5" id="my-carousel">
                         <div class="my-carousel-images">
 
-                            <div class="my-carousel-item active">
+                            <!-- <div class="my-carousel-item active">
                                 <img class="img-fluid" src="http://www.viaggiareonline.it/wp-content/uploads/2014/11/sweden_148857365.jpg" alt="${images[i].title} picture">
                                 <div class="item-description px-3">
                                     <h2>Svezia</h2>
                                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam.</p>
                                 </div>
+                            </div> -->
+                            <div class="">
+                                <div class="my-carousel-item active">
+                                    <img class="img-fluid" :src="images[counter].url" :alt="images[counter].title">
+                                    <div class="item-description px-3">
+                                        <h2>{{ images[counter].title }}</h2>
+                                        <p>{{ images[counter].description }}</p>
+                                    </div>
+                                </div>            
                             </div>
-
+                            
                             
 
                         </div>
